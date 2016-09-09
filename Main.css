@@ -13,9 +13,9 @@
     padding: 10px;
 	position:relative;
 	}
-div
+/*div
 {
-	border:solid black 2px;
+border:solid black 2px;
 height: 50px;
 background-color:black;
 width: 15%;
@@ -23,11 +23,8 @@ color: white;
 display:inline-block;
 margin:30px;
 }
+*/
 
-p
-{
-	color:green;
-}
 #spel2
 {
 	width:50%;
@@ -132,6 +129,7 @@ ul.navbar {
     overflow: hidden;
     background-color: #333;
     text-align:center;
+    
 }
 
 /* Positionering av knapparna */
@@ -152,9 +150,56 @@ ul.navbar li a {
     font-size: 17px;
 }
 
-/* Change background color of links on hover */
+/* Ändrar färgen när man hovrar över navbar länkarna */
 ul.navbar li a:hover {background-color: #555;}
 
-/* Hide the list item that contains the link that should open and close the topnav on small screens */
+/* Gömmer listan som innehåller länkar som öppnar/stänger navbaren på mindre skärmar. */
 ul.navbar li.icon {display: none;}
 
+h1
+{
+	text-align:center;
+	color: #FFFFFF;
+	font-style: italic;
+	
+}
+
+body
+{
+	background-image: url("Abstract-Grey-Background.png");
+	background-repeat:no-repeat;
+	background-color: #FFFFFF;
+}
+
+#slideshow img{
+   
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    top: 175px;
+    left: 5%;
+    right: 10%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+#Slideshow.visibleImage
+{    
+        z-index: 99;    
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f5f5f5;
+}
