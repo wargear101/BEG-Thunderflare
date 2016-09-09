@@ -1,0 +1,160 @@
+/* sätter storlek, position för unika element och för hela divar*/
+.spel 
+{
+	max-width: 100%;
+	height:auto;
+	}
+	
+.spel img
+{
+	margin: auto;
+    width: 50%;
+    border: 3px solid #ffffff;
+    padding: 10px;
+	position:relative;
+	}
+div
+{
+	border:solid black 2px;
+height: 50px;
+background-color:black;
+width: 15%;
+color: white;
+display:inline-block;
+margin:30px;
+}
+
+p
+{
+	color:green;
+}
+#spel2
+{
+	width:50%;
+	}
+#spel2 img
+
+{
+height: 400px;
+width: 100%;
+z-index: -1;
+position:relative;
+}
+/* sätter färg, storlek och andra grafiska specifikationer för body, rubriker, knappar , övertäckning och pop up*/
+
+body{background-color:#FFFFFF;
+background-size: cover;
+  height: 175vh;
+  font-family: Arial;}
+
+/*h1 {
+  text-align: center;
+  font-family: Tahoma, Arial, sans-serif;
+  color: #06D85F;
+  margin: 80px 0;
+}
+*/
+.button {
+  font-size: 1em;
+  padding: 10px;
+  color:green;
+  border: 2px solid #06D85F;
+  border-radius: 20px/50px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+.button:hover {
+  background: #06D85F;
+}
+/* sätter position, överångstid, synligheten(opacity) ställs på 0 på den övertäckande ytan som ska synas vid knapp tryckning */ 
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+/* gör att rutan syns */
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 250%;
+  height: 250%;
+  position: relative;
+  background-color:black;
+  color:green;
+  
+}
+/*
+.popup h2 {
+  margin-top: 0;
+  color:green;
+  font-family: Tahoma, Arial, sans-serif;
+}
+*/
+/*stänger pop up*/
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: green;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  display:inline;
+  overflow: auto;
+  color:green;
+}
+
+/* Bestämmer färg och margin/padding på navbaren */
+ul.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    text-align:center;
+}
+
+/* Positionering av knapparna */
+ul.navbar li
+{
+	display: inline-block;
+	
+}
+
+/* listitems får egna stilar */
+ul.navbar li a {
+    display: inline-block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of links on hover */
+ul.navbar li a:hover {background-color: #555;}
+
+/* Hide the list item that contains the link that should open and close the topnav on small screens */
+ul.navbar li.icon {display: none;}
+
