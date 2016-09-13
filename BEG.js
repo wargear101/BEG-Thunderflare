@@ -1,27 +1,11 @@
-$(function () {
- 
-    /* SET PARAMETERS */
-    var change_img_time     = 5000;
-    var transition_speed    = 100;
- 
-    var simple_slideshow    = $("#slideshow"),
-        listItems           = simple_slideshow.children('img'),
-        listLen             = listItems.length,
-        i                   = 0,
- 
-        changeList = function () {
- 
-            listItems.eq(i).fadeOut(transition_speed, function () {
-                i += 1;
-                if (i === listLen) {
-                    i = 0;
-                }
-                listItems.eq(i).fadeIn(transition_speed);
-            });
- 
-        };
- 
-    listItems.not(':first').hide();
-    setInterval(changeList, change_img_time);
- 
-});
+$(document).ready(function(){
+	$.get("http://ofcourse.oru.se/~IK2009/json/get_jobs.php", function(data){
+ if(data.status == 1)
+ {		
+ 	$.each(data.result, function() {
+ 		$('#jobPosition').append('<li class="job">' + this.city + ', ' + this.position + '</li>');
+ 	});
+ }
+ 				
+	}
+	)})

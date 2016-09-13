@@ -1,56 +1,22 @@
 /* sätter storlek, position för unika element och för hela divar*/
-.spel 
-{
-	max-width: 100%;
-	height:auto;
-	}
-	
-.spel img
+
+.container img
 {
 	margin: auto;
-    width: 50%;
+    max-width: 100%;
+    max-height: 100%;
     border: 3px solid #ffffff;
-    padding: 10px;
 	position:relative;
 	}
-/*div
+
+body
 {
-border:solid black 2px;
-height: 50px;
-background-color:black;
-width: 15%;
-color: white;
-display:inline-block;
-margin:30px;
-}
-*/
+	background-color:#FFFFFF;
+	background-size: cover;
+  	height: 175vh;
+  	font-family: Arial;}
 
-#spel2
-{
-	width:50%;
-	}
-#spel2 img
 
-{
-height: 400px;
-width: 100%;
-z-index: -1;
-position:relative;
-}
-/* sätter färg, storlek och andra grafiska specifikationer för body, rubriker, knappar , övertäckning och pop up*/
-
-body{background-color:#FFFFFF;
-background-size: cover;
-  height: 175vh;
-  font-family: Arial;}
-
-/*h1 {
-  text-align: center;
-  font-family: Tahoma, Arial, sans-serif;
-  color: #06D85F;
-  margin: 80px 0;
-}
-*/
 .button {
   font-size: 1em;
   padding: 10px;
@@ -120,9 +86,45 @@ background-size: cover;
   overflow: auto;
   color:green;
 }
+div.gallery 
+{
+	margin: 5px;
+    width: 180px;
+    display:inline-block;
+}
+
+div .gallery:hover 
+{
+	#808080
+	solid;
+	opacity: 0.7;
+}
+
+div .gallery img 
+{
+    width: 100%;
+    height: auto;
+    display:inline-block;
+   }
+
+div.description {
+    padding: 15px;
+    text-align: center;
+   }
+h1
+{
+	text-align:center;
+	font-style: italic;	
+}
+
+.container
+{
+	text-align:center;
+}
 
 /* Bestämmer färg och margin/padding på navbaren */
-ul.navbar {
+ul.navbar 
+{
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -164,42 +166,32 @@ h1
 	
 }
 
-body
+/* Sätter position och minimum höjd */
+html 
 {
-	background-image: url("Abstract-Grey-Background.png");
-	background-repeat:no-repeat;
-	background-color: #FFFFFF;
-}
-
-#slideshow img{
-   
-    width: 50%;
-    height: 50%;
-    position: absolute;
-    top: 175px;
-    left: 5%;
-    right: 10%;
-    margin-left: 20%;
-    margin-right: 20%;
-}
-#Slideshow.visibleImage
-{    
-        z-index: 99;    
-}
-
-html {
   position: relative;
   min-height: 100%;
 }
-body {
-  /* Margin bottom by footer height */
+body 
+{
+  /* marginal i botten */
   margin-bottom: 60px;
 }
-.footer {
+.footer 
+{
   position: absolute;
   bottom: 0;
   width: 100%;
-  /* Set the fixed height of the footer here */
+  /* Sätter fixerad höjd på footern */
   height: 60px;
   background-color: #f5f5f5;
+}
+
+.job
+{
+	text-align:center;
+	border-width: 10px;
+	border-style: solid;
+	border-color: #808080;
+	
 }
