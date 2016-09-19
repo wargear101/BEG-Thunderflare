@@ -187,11 +187,36 @@ body
   background-color: #f5f5f5;
 }
 
-.job
+.cityDesc
 {
-	text-align:center;
-	border-width: 10px;
-	border-style: solid;
-	border-color: #808080;
-	
+    text-align: center;
+    color: white;
+    background-color: Grey;
+    padding-top: 2px;
+}
+
+.showDescBtn
+{
+    font-size: large;
+    text-align: center;
+    color: white;
+    background-color: #333;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+}
+.jobDesc
+{
+    text-align: center;
+    color: white;
+    background-color: #333;
+    padding-top: 2px;
+}
+.showDescBtn:hover {background-color: #555;}
+
+#jobPosition
+{
+    text-align: center;
+    background-color: #333;
+    
 }
