@@ -1,0 +1,331 @@
+
+/* Sätter en storlek & text-stil för hela sidan*/
+html {
+	font-family: sans-serif;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%
+}
+
+/* sätter marginalen och höjden för bodyn */
+body {
+	margin: 0;
+	height: 100%;
+}
+/* Sätter betoning på texten på h taggen */
+h1 {
+	font-size: 2em;
+	margin: 0.67em 0
+}
+
+/*(container klass) sätter position och höjd/bredd samt hanterar innehåll som flödar över utanför sidans gränser*/
+.slideshow {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+/* Skapar animationen för slideshow och kenburns effekten(utzoomning och fade out) och sätter position, storlek och förhindrar repetition av bakgrunden och sätter dess storlek */
+/* webkit är ett element för att styla kod för safari, men fungerar även på andra webbläsare */
+.slideshow-image {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: no-repeat 50% 50%;
+	background-size: cover;
+	-webkit-animation-name: kenburns;
+	animation-name: kenburns;
+	-webkit-animation-timing-function: linear;
+	animation-timing-function: linear;
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+	-webkit-animation-duration: 16s;
+	animation-duration: 16s;
+	opacity: 1;
+	-webkit-transform: scale(1.2);
+	transform: scale(1.2);
+}
+/* kod för varje bild i bildspelet som visar utzommande animationen (kenburns) samt z-index för bilderna. Gäller för varje nth-child element*/
+.slideshow-image:nth-child(1) {
+	-webkit-animation-name: kenburns-1;
+	animation-name: kenburns-1;
+	z-index: 3;
+}
+
+.slideshow-image:nth-child(2) {
+	-webkit-animation-name: kenburns-2;
+	animation-name: kenburns-2;
+	z-index: 2;
+}
+
+.slideshow-image:nth-child(3) {
+	-webkit-animation-name: kenburns-3;
+	animation-name: kenburns-3;
+	z-index: 1;
+}
+
+.slideshow-image:nth-child(4) {
+	-webkit-animation-name: kenburns-4;
+	animation-name: kenburns-4;
+	z-index: 0;
+}
+/* CSSen nedan till nästa kommentar sköter genomskinligheten för fade out effekten på bildspelet men även transform, skalan, kenburns och sätter webkit */
+@-webkit-keyframes
+kenburns-1 {  0% {
+opacity: 1;
+-webkit-transform: scale(1.2);
+transform: scale(1.2);
+}
+1.5625% {
+opacity: 1;
+}
+23.4375% {
+opacity: 1;
+}
+26.5625% {
+opacity: 0;
+-webkit-transform: scale(1);
+transform: scale(1);
+}
+100% {
+opacity: 0;
+-webkit-transform: scale(1.2);
+transform: scale(1.2);
+}
+98.4375% {
+opacity: 0;
+-webkit-transform: scale(1.21176);
+transform: scale(1.21176);
+}
+100% {
+opacity: 1;
+}
+}
+@keyframes
+kenburns-1 {  0% {
+opacity: 1;
+-webkit-transform: scale(1.2);
+transform: scale(1.2);
+}
+1.5625% {
+opacity: 1;
+}
+23.4375% {
+opacity: 1;
+}
+26.5625% {
+opacity: 0;
+-webkit-transform: scale(1);
+transform: scale(1);
+}
+100% {
+opacity: 0;
+-webkit-transform: scale(1.2);
+transform: scale(1.2);
+}
+98.4375% {
+opacity: 0;
+-webkit-transform: scale(1.21176);
+transform: scale(1.21176);
+}
+100% {
+opacity: 1;
+}
+}
+@-webkit-keyframes
+kenburns-2 {  23.4375% {
+opacity: 1;
+-webkit-transform: scale(1.2);
+transform: scale(1.2);
+}
+26.5625% {
+opacity: 1;
+}
+48.4375% {
+opacity: 1;
+}
+51.5625% {
+opacity: 0;
+-webkit-transform: scale(1);
+transform: scale(1);
+}
+100% {
+opacity: 0;
+-webkit-transform: scale(1.2);
+transform: scale(1.2);
+}
+}
+@keyframes
+kenburns-2 {  23.4375% {
+opacity: 1;
+-webkit-transform: scale(1.2);
+transform: scale(1.2);
+}
+26.5625% {
+opacity: 1;
+}
+48.4375% {
+opacity: 1;
+}
+51.5625% {
+opacity: 0;
+-webkit-transform: scale(1);
+transform: scale(1);
+}
+100% {
+opacity: 0;
+-webkit-transform: scale(1.2);
+transform: scale(1.2);
+}
+}
+@-webkit-keyframes
+kenburns-3 {  48.4375% {
+opacity: 1;
+-webkit-transform: scale(1.2);
+transform: scale(1.2);
+}
+51.5625% {
+opacity: 1;
+}
+73.4375% {
+opacity: 1;
+}
+76.5625% {
+opacity: 0;
+-webkit-transform: scale(1);
+transform: scale(1);
+}
+100% {
+opacity: 0;
+-webkit-transform: scale(1.2);
+transform: scale(1.2);
+}
+}
+@keyframes
+kenburns-3 {  48.4375% {
+opacity: 1;
+-webkit-transform: scale(1.2);
+transform: scale(1.2);
+}
+51.5625% {
+opacity: 1;
+}
+73.4375% {
+opacity: 1;
+}
+76.5625% {
+opacity: 0;
+-webkit-transform: scale(1);
+transform: scale(1);
+}
+100% {
+opacity: 0;
+-webkit-transform: scale(1.2);
+transform: scale(1.2);
+}
+}
+@-webkit-keyframes
+kenburns-4 {  73.4375% {
+opacity: 1;
+-webkit-transform: scale(1.2);
+transform: scale(1.2);
+}
+76.5625% {
+opacity: 1;
+}
+98.4375% {
+opacity: 1;
+}
+100% {
+opacity: 0;
+-webkit-transform: scale(1);
+transform: scale(1);
+}
+}
+@keyframes
+kenburns-4 {  73.4375% {
+opacity: 1;
+-webkit-transform: scale(1.2);
+transform: scale(1.2);
+}
+76.5625% {
+opacity: 1;
+}
+98.4375% {
+opacity: 1;
+}
+100% {
+opacity: 0;
+-webkit-transform: scale(1);
+transform: scale(1);
+}
+}
+
+/* css för klassen som innehåller text. Samt position och även en transform, som gör att man kan få ett 2d eller 3d effekt på ett element samt z-index*/
+.intro {
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	-webkit-transform: translate3d(-50%, -50%, 0);
+	transform: translate3d(-50%, -50%, 0);
+	z-index: 99;
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	text-transform: uppercase;
+	background-color: rgba(255, 255, 255, 0.75);
+	box-shadow: 0 1em 2em -1em rgba(0, 0, 0, 0.5);
+	padding: 1em 2em;
+	line-height: 1.5;
+}
+/* Sätter position, z-index, storlek m.m. för p taggen */
+p {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate3d(-50%, -50%, 0);
+	transform: translate3d(-50%, -50%, 0);
+	z-index: 99;
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	text-transform: uppercase;
+	background-color: rgba(255, 255, 255, 0.75);
+	box-shadow: 0 1em 2em -1em rgba(0, 0, 0, 0.5);
+	padding: 1em 2em;
+	line-height: 1.5;
+}
+/* Bestämmer färg och margin/padding på navbaren */
+ul.navbar {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #333;
+	text-align: center;
+}
+
+/* Positionering av knapparna */
+ul.navbar li {
+	display: inline-block;
+}
+
+/* listitems får egna stilar */
+ul.navbar li a {
+	display: inline-block;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	transition: 0.3s;
+	font-size: 17px;
+}
+
+/* Ändrar färgen när man hovrar över navbar länkarna */
+ul.navbar li a:hover {
+	background-color: #555;
+}
+
+/* Gömmer listan som innehåller länkar som öppnar/stänger navbaren på mindre skärmar. */
+ul.navbar li.icon {
+	display: none;
+}

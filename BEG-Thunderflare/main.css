@@ -1,0 +1,266 @@
+/* container klassen stylar bilderna på spelsidan och anger position, max höjd/bredd och gräns */
+.container img {
+	margin: auto;
+	max-width: 100%;
+	max-height: 100%;
+	border: 3px solid #ffffff;
+	position: relative;
+	text-align: center;
+}
+/* style element för bakgrundsfärg och storlek i bodyn */
+body {
+	background-color: #FFFFFF;
+	background-size: cover;
+	height: 100%;
+	font-family: Arial;
+}
+/* css för galleri klassen på spelsidan för att positionera spelen bredvid varandra */
+div.gallery {
+	margin: 5px;
+	width: 180px;
+	display: inline-block;
+}
+
+/* styr storleken på bilden */
+div .gallery img {
+	width: 100%;
+	height: auto;
+	display: inline-block;
+}
+/*style för beskrivning i modalen */
+div.description {
+	padding: 15px;
+	text-align: center;
+}
+
+/* Denna centrerar bilderna på games sidan */
+.container {
+	text-align: center;
+}
+
+/* Bestämmer färg och margin/padding på navbaren */
+ul.navbar {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #333;
+	text-align: center;
+}
+
+/* Positionering av knapparna */
+ul.navbar li {
+	display: inline-block;
+}
+
+/* listitems får egna stilar */
+ul.navbar li a {
+	display: inline-block;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	transition: 0.3s;
+	font-size: 17px;
+}
+
+/* Ändrar färgen när man hovrar över navbar länkarna */
+ul.navbar li a:hover {
+	background-color: #555;
+}
+
+/* Gömmer listan som innehåller länkar som öppnar/stänger navbaren på mindre skärmar. */
+ul.navbar li.icon {
+	display: none;
+}
+
+/* Sätter position och minimum höjd */
+html {
+	position: relative;
+	min-height: 100%;
+}
+
+/* sätter position och bredd för footern på sidan */
+.footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	/* Sätter fixerad höjd på footern */
+	height: 60px;
+	background-color: #f5f5f5;
+}
+/* centrerar loggan på games sidan */
+.banner {
+	text-align: center;
+}
+
+/* Ger css som döljer, fixerar, sätter fast på toppen, plats för boxen, bredd/höjd och m.m. för att modal boxen som innehåller beskrivning av spel*/
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	padding-top: 100px;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgb(0,0,0);
+	background-color: rgba(0,0,0,0.4);
+}
+
+/* Stylar innehålet i modalen */
+.modal-content {
+	position: relative;
+	background-color: #fefefe;
+	margin: auto;
+	padding: 0;
+	border: 1px solid #888;
+	width: 80%;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	-webkit-animation-name: animatetop;
+	-webkit-animation-duration: 0.4s;
+	animation-name: animatetop;
+	animation-duration: 0.4s
+}
+
+/* Lägger till animation via webkit och keyframes */
+@-webkit-keyframes animatetop {
+from {
+	top: -300px;
+	opacity: 0
+}
+to {
+	top: 0;
+	opacity: 1
+}
+}
+
+/* keyframe för animation, som också döljer knappen ovanför sidan tills knappen klickas */
+@keyframes
+animatetop {from {
+	top: -300px;
+	opacity: 0
+}
+to {
+	top: 0;
+	opacity: 1
+}
+}
+
+/* CSS för knappen */
+.close {
+	color: white;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+/* Lägger till hover */
+.close:hover, .close:focus {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+}
+/* CSS för header, footer och body nedan för modalen */
+.modal-header {
+	padding: 2px 16px;
+	background-color: #5cb85c;
+	color: white;
+}
+
+.modal-body {
+	padding: 2px 16px;
+}
+
+.modal-footer {
+	padding: 2px 16px;
+	background-color: #5cb85c;
+	color: white;
+}
+/* CSS för nyhetssidan */
+.newsBox {
+	text-align: center;
+	font-family: "Arial Black";
+}
+
+/* Styling av rubriker */
+.aboutrubrik {
+	color: black;
+	position: relative;
+	text-align: center;
+}
+.aboutrubrik2 {
+	position: relative;
+	color: black;
+	text-align: center;
+}
+/* Styling av om oss texten */
+#texth1 {
+	position: relative;
+	top: 100px;
+	width: 50%;
+	left: 50%;
+	-webkit-transform: translate3d(-50%, -50%, 0);
+	transform: translate3d(-50%, -50%, 0);
+	z-index: 99;
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	text-transform: uppercase;
+	background-color: rgba(255, 255, 255, 0.75);
+	box-shadow: 0 1em 2em -1em rgba(0, 0, 0, 0.5);
+	padding: 1em 2em;
+	line-height: 1.5;
+}
+/* CSS för utskriften av stad */
+#skrivUtStad {
+	text-align: center;
+	top: 600px;
+}
+
+/* CSS för kontakformulärets frågefält */
+#questBox {
+	width: 50%;
+}
+/* Lägger muspekare när man klickar på read more */
+.openModal {
+	cursor: pointer;
+}
+
+/* CSS för p tag på job sidan */
+.cityDesc {
+	text-align: center;
+	color: white;
+	background-color: Grey;
+	padding-top: 2px;
+}
+/* CSS för knappen visa jobb */
+.showDescBtn {
+	font-size: large;
+	text-align: center;
+	color: white;
+	background-color: #333;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+/* CSS för p tag jobbeskrivningen */
+.jobDesc {
+	text-align: center;
+	color: white;
+	background-color: #333;
+	padding-top: 2px;
+}
+/* Lägger till hover funktion */
+.showDescBtn:hover {
+	background-color: #555;
+}
+
+/* CSS för listan som kommer in vid anrop */
+#jobPosition {
+	text-align: center;
+	background-color: #333;
+}
+/* centrering av karta */
+.kartBox {
+	text-align: center;
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<title>About</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+		<link type=text/css rel="stylesheet" href="Main.css"/>
+		<script src="jquery-3.1.0.min.js" ></script>
+		<script src="BEG.js"></script>
+
+	</head>
+
+	<body>
+		<header>
+			<nav>
+				<ul class="navbar" id="nav-navbar">
+					<li>
+						<a href="index.html">BEG</a>
+					</li>
+					<li>
+						<a href="games.html">Games</a>
+					</li>
+					<li>
+						<a href="news.html">News</a>
+					</li>
+					<li>
+						<a href="contact.html">Contact</a>
+					</li>
+					<li>
+						<a href="about.html">About</a>
+					</li>
+					<li>
+						<a href="jobs.html">Jobs</a>
+					</li>
+					<li class="icon">
+						<a href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<!-- Knappar, rubriker och p taggar -->
+		<div class="aboutrubrik">
+			<h1 class="aboutrubrik"> Vad är vi </h1>
+			<p id="texth1">
+				Vad är Lorem Ipsum?
+				Lorem Ipsum är en utfyllnadstext från tryck- och förlagsindustrin. Lorem ipsum har varit standard ända sedan 1500-talet, när en okänd boksättare tog att antal bokstäver och blandade dem för att göra ett provexemplar av en bok. Lorem ipsum har inte bara överlevt fem århundraden, utan även övergången till elektronisk typografi utan större förändringar. Det blev allmänt känt på 1960-talet i samband med lanseringen av Letraset-ark med avsnitt av Lorem Ipsum, och senare med mjukvaror som Aldus PageMaker.
+			</p>
+		</div>
+		<div>
+			<h1 class="aboutrubrik2"> Här hittar du oss </h1>
+		</div>
+		<!-- div class för kartboxen och div för img map, där bild på karta samt koordinater finns -->
+		<div class="kartBox">
+
+			<img src="beg/kartaearth.gif" alt="" usemap="#Map" />
+			<map name="Map" id="Map">
+				<area alt="" title="toronto" href="#" shape="rect" coords="131,328,138,337"  onclick="getCity(this)" />
+				<area alt="" title="snoqualmie" href="#" shape="rect" coords="255,346,257,353" onclick="getCity(this)" />
+				<area alt="" title="sheffield" href="#" shape="rect" coords="474,303,480,309"  onclick="getCity(this)" />
+				<area alt="" title="goteborg" href="#" shape="rect" coords="511,283,522,286" onclick="getCity(this)"/>
+				<area alt="" title="orebro" href="#" shape="rect" coords="522,270,530,277" onclick="getCity(this)"/>
+				<area alt="" title="kyoto" href="#" shape="rect" coords="863,375,877,385" onclick="getCity(this)"/>
+
+			</map>
+		</div>
+<!-- div för att skriva ut vald stad på img map -->
+		<div id="skrivUtStad"></div>
+
+	</body>
+</html>

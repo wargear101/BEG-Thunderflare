@@ -1,0 +1,9 @@
+ul li{display: inline; position: top; padding:50px;
+color:yellow;}
+ul li a{color:yellow;}
+a:hover{text-decoration:none;color:blue;}
+h1{color:blue;}
+div  {width: 50% }
+div p{color:blue;}
+body{background-image:url(http://varldensflaggor.se/bilder/flaggor/sveriges-flagga.png);}
+table{border:10px solid yellow;}
